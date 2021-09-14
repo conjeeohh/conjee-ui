@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="_title">Table 表格</h2>
+    <h2 class="_title">Tab 标签页</h2>
     <p>用于展示多条结构类似的数据，可对数据进行排序、筛选、对比或其他自定义操作。</p>
 
     <block-code title="基础表格" :code="code1">

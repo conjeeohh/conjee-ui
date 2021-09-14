@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="_title">Card 多选框</h2>
+    <h2 class="_title">Card 卡片</h2>
     <p class="_intro">将信息聚合在卡片容器中展示。</p>
 
     <block-code title="基础用法" :code="code1">

@@ -1,4 +1,4 @@
-import Button from '../components/Button'
+/* import Button from '../components/Button'
 import Quickstart from '../components/Quickstart'
 import Icon from '../components/Icon'
 import Input from '../components/Input'
@@ -16,7 +16,26 @@ import Divider from '../components/Divider'
 import Dialog from '../components/Dialog'
 import Form from '../components/Form'
 import Tabs from '../components/Tabs'
-import Pagination from '../components/Pagination'
+import Pagination from '../components/Pagination' */
+const Button = () => import('../components/Button')
+const Quickstart = () => import('../components/Quickstart')
+const Icon = () => import('../components/Icon')
+const Input = () => import('../components/Input')
+const Inputpro = () => import('../components/Inputpro')
+const Table = () => import('../components/Table')
+const Select = () => import('../components/Select')
+const Checkbox = () => import('../components/Checkbox')
+const Radio = () => import('../components/Radio')
+const Switch = () => import('../components/Switch')
+const Card = () => import('../components/Card')
+const Progress = () => import('../components/Progress')
+const Message = () => import('../components/Message')
+const Grid = () => import('../components/Grid')
+const Dialog = () => import('../components/Dialog')
+const Form = () => import('../components/Form')
+const Pagination = () => import('../components/Pagination')
+const Divider = () => import('../components/Divider')
+const Tabs = () => import('../components/Tabs')
 
 export default [
     {

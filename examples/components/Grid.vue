@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="_title">Layout 布局</h2>
+    <h2 class="_title">Grid 栅格</h2>
     <p class="_intro">通过基础的 24 分栏，迅速简便地创建布局。</p>
 
     <block-code title="基础布局" :code="code1">

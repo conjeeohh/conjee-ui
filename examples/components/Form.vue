@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="_title">Switch 开关</h2>
+    <h2 class="_title">Form 表单</h2>
     <p>表示两种相互对立的状态间的切换，多用于触发「开/关」。</p>
 
     <block-code title="基础用法" :code="code1">

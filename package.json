@@ -1,6 +1,6 @@
 {
   "name": "conjee-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "main": "lib/conjee-ui.umd.min.js",
   "license": "MIT",
@@ -19,6 +19,7 @@
     "vue-router": "^3.5.2"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
