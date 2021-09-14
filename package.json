@@ -2,8 +2,14 @@
   "name": "conjee-ui",
   "version": "2.0.0",
   "private": false,
-  "main": "lib/conjee-ui.umd.min.js",
+  "main": "lib/conjee-ui.common.js",
+  "description": "A Component Library for Vue.js.",
   "license": "MIT",
+  "files": [
+    "lib",
+    "src",
+    "packages"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

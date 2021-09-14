@@ -30,6 +30,7 @@ import CoFormItem from './co-form-item'
 import CoTabs from './co-tabs'
 import CoTabPane from './co-tab-pane'
 import CoPagination from './co-pagination'
+import './css/global.css'
 
 Vue.use(Message)
 // 所有组件列表

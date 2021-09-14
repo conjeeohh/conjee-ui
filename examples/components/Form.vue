@@ -115,7 +115,7 @@ export default {
             <co-button type="primary">立即创建</co-button>
             <co-button style="margin-left:10px">取消</co-button>
         </co-form-item>
-    <co-form>`,
+    </co-form>`,
         javascript: `
     export default {
       data () {

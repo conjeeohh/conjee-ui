@@ -49,11 +49,10 @@ export default {
       `,
       code3: `
     import Vue from 'vue'
-    import SxdUi from 'sxd-ui'
-    import "sxd-ui/lib/sxd-ui.css"
+    import ConjeeUi from 'conjee-ui'
     import App from './App.vue'
 
-    Vue.use(SxdUi)
+    Vue.use(ConjeeUi)
 
     new Vue({
       el: '#app',
@@ -62,7 +61,7 @@ export default {
       `,
       code4: `
     import Vue from 'vue'
-    import { Button, Select } from 'sxd-ui'
+    import { Button, Select } from 'conjee-ui'
 
     Vue.component(Button.name, Button)
     Vue.component(Select.name, Select)
