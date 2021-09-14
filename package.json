@@ -1,6 +1,6 @@
 {
   "name": "conjee-ui",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": false,
   "main": "lib/conjee-ui.common.js",
   "description": "A Component Library for Vue.js.",
