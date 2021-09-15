@@ -1,14 +1,14 @@
 {
   "name": "conjee-ui",
-  "version": "3.0.0",
+  "author": "conjee",
+  "version": "3.0.1",
   "private": false,
-  "main": "lib/conjee-ui.common.js",
+  "main": "lib/conjee-ui.umd.min.js",
   "description": "A Component Library for Vue.js.",
   "license": "MIT",
   "files": [
     "lib",
-    "src",
-    "packages"
+    "src"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
