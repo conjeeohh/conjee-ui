@@ -50,6 +50,7 @@ export default {
       code3: `
     import Vue from 'vue'
     import ConjeeUi from 'conjee-ui'
+    import "conjee-ui/lib/conjee-ui.css"
     import App from './App.vue'
 
     Vue.use(ConjeeUi)
@@ -61,13 +62,14 @@ export default {
       `,
       code4: `
     import Vue from 'vue'
-    import { Button, Select } from 'conjee-ui'
+    import { CoButton, CoSelect } from 'conjee-ui'
+    import "conjee-ui/lib/conjee-ui.css"
 
-    Vue.component(Button.name, Button)
-    Vue.component(Select.name, Select)
+    Vue.component(CoButton.name, CoButton)
+    Vue.component(CoSelect.name, CoSelect)
     /* 或写为
-    * Vue.use(Button)
-    * Vue.use(Select)
+    * Vue.use(CoButton)
+    * Vue.use(CoSelect)
     */
       `,
     };

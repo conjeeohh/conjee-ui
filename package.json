@@ -1,7 +1,7 @@
 {
   "name": "conjee-ui",
   "author": "conjee",
-  "version": "3.0.2",
+  "version": "3.0.5",
   "private": false,
   "main": "lib/conjee-ui.umd.min.js",
   "description": "A Component Library for Vue.js.",
