@@ -77,3 +77,7 @@ html::-webkit-scrollbar-track {
   color: #1f2f3d;
   font-size: 22px;
 }
+.hljs-comment, .hljs-quote {
+    color: #00a09c !important;
+    font-style: normal !important;
+}

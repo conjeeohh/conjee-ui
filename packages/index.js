@@ -76,7 +76,36 @@ const install = function (Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
-
+export {
+    install,
+    CoButton,
+    CoIcon,
+    CoInput,
+    CoInputpro,
+    CoSelect,
+    CoOption,
+    BlockCode,
+    BlockTable,
+    CoTable,
+    CoTableColumn,
+    CoCheckbox,
+    CoCheckboxGroup,
+    CoRadio,
+    CoRadioGroup,
+    CoSwitch,
+    CoCard,
+    CoProgress,
+    CoRow,
+    CoCol,
+    CoDivider,
+    CoDialog,
+    CoForm,
+    CoFormItem,
+    CoRadioButton,
+    CoTabs,
+    CoTabPane,
+    CoPagination
+}
 // 暴露组件
 export default {
     // 导出的对象必须具有install，才能被Vue.use()方法安装

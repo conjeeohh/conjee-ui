@@ -9,21 +9,21 @@
     </div>
     <!-- end -->
 
-    <!-- CDN安装 start -->
+    <!-- CDN安装 start
     <div class="install">
       <h3>CDN</h3>
       <p>目前可以通过 unpkg.com/conjee-ui 获取到最新版本的资源，在页面上引入 js 和 css 文件即可开始使用。</p>
       <pre v-highlightjs="code2"><code class="html"></code></pre>
-    </div>
+    </div> -->
 
     <h2 style="margin-top:50px">快速上手</h2>
     <div class="install">
-      <h3>引入 SxdUi</h3>
+      <h3>引入 ConjeeUi</h3>
       <h4>完整引入</h4>
       <p>在 main.js 中写入以下内容：</p>
       <pre v-highlightjs="code3"><code class="javascript"></code></pre>
 
-      <p>以上代码便完成了 sxd-ui 的引入。需要注意的是，样式文件需要单独引入。</p>
+      <p>以上代码便完成了 conjee-ui 的引入。需要注意的是，样式文件需要单独引入。</p>
     </div>
     <div class="install">
       <h4>按需引入</h4>
