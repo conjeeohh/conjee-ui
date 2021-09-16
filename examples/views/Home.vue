@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <!-- 头部 start-->
-    <div class="header">
+    <div :class="[viewport.width < 758 ? 'mini-header':'header']">
+      <svg class="icon header_icon" aria-hidden="true" v-if="viewport.width < 758" @click="setMenuVisible">
+        <use :xlink:href="`#icon-toggle-${headerIconName}`"></use>
+      </svg>
       <svg class="icon logo" aria-hidden="true">
         <use :xlink:href="`#icon-zhou`"></use>
       </svg>
@@ -11,7 +14,7 @@
 
     <div class="article" ref="article">
       <!-- 侧边导航栏 -->
-      <div class="aside">
+      <div class="aside" v-if="viewport.width >= 758">
         <ul v-for="menu in menuList" :key="menu.label" class="asideUl">
           <h4 class="asideMenuH4">{{menu.label}}</h4>
           <li class="asideMenuSingle" v-for="single in menu.children" :key="single.label">
@@ -19,11 +22,24 @@
           </li>
         </ul>
       </div>
+      <transition name="miniaside">
+        <div class="aside miniaside" v-if="viewport.width < 758 && menuVisible">
+          <ul v-for="menu in menuList" :key="menu.label" class="asideUl">
+            <h4 class="asideMenuH4">{{menu.label}}</h4>
+            <li class="asideMenuSingle" v-for="single in menu.children" :key="single.label" @click="menuVisible = false">
+              <a :href="single.path">{{single.label}}</a>
+            </li>
+          </ul>
+        </div>
+      </transition>
+
       <!-- 主体内容 -->
       <div class="main">
-        <transition mode="out-in">
+
+        <transition mode="out-in" v-if="viewport.width >= 758">
           <router-view></router-view>
         </transition>
+        <router-view v-else></router-view>
       </div>
     </div>
   </div>
@@ -172,9 +188,14 @@ export default {
         },
       ],
       viewport: {},
+      menuVisible: false,
     };
   },
-  computed: {},
+  computed: {
+    headerIconName() {
+      return this.menuVisible ? "left" : "right";
+    },
+  },
   methods: {
     getViewPort() {
       this.viewport = {
@@ -187,6 +208,10 @@ export default {
     updateAsideHeight() {
       this.$refs.article.style.height = `${this.viewport.height}px`;
     },
+    // 设置侧边栏可见性
+    setMenuVisible() {
+      this.menuVisible = !this.menuVisible;
+    },
   },
   mounted() {
     this.getViewPort();
@@ -194,6 +219,9 @@ export default {
     window.addEventListener("resize", function () {
       _this.getViewPort();
     });
+    if (this.viewport.width < 758) {
+      // alert("本网站移动端文档尚在完善中...，建议使用pad或者电脑查看");
+    }
   },
 };
 </script>
@@ -207,6 +235,15 @@ export default {
 }
 .v-leave-active {
   transition: all 0.5s linear;
+}
+.miniaside-leave-to,
+.miniaside-enter {
+  transform: translateX(-100%);
+  // opacity: 0;
+}
+
+.miniaside-leave-active {
+  transition: all 0.6s linear;
 }
 // 过渡 end
 
@@ -229,7 +266,8 @@ a:focus {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  .header {
+  .header,
+  .mini-header {
     display: flex;
     align-items: center;
     position: fixed;
@@ -250,6 +288,27 @@ a:focus {
     h2 {
       display: inline-block;
       color: @color;
+    }
+  }
+  .mini-header {
+    justify-content: center;
+    h2 {
+      display: none;
+    }
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3em;
+      height: 3em;
+      transform: translate(-50%, -50%);
+    }
+    .header_icon {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      font-size: 20px;
     }
   }
   .article {
@@ -298,7 +357,14 @@ a:focus {
         }
       }
     }
+    .miniaside {
+      position: absolute;
+      background-color: #fff;
+      z-index: 1;
+      transition: all 0.4s;
+    }
     .main {
+      position: relative;
       flex: 1;
       height: 100%;
       padding: 20px 60px;
